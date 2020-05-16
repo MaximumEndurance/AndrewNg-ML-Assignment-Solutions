@@ -21,7 +21,8 @@ X_rec = zeros(size(Z, 1), size(U, 1));
 %               Notice that U(j, 1:K) is a row vector.
 %               
 
-X_rec = Z * U(:, 1:K)';
+X_rec = Z * U(:, 1:K)';   % This recovery X is never the original X but a slight approaximation.
+% This is because you didn't know by how much the the initial vector X was rotated to ge to get the projection onto the line.
 
 % =============================================================
 
